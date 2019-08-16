@@ -1,0 +1,10 @@
+$ touch .gitignore
+
+$ cat .gitignore
+
+SMukhia@lt-lon-W059 MINGW64 ~/PycharmProjects/sql-connection (master) #### This code will add '.idea/' into .gitignore file (once you have created it). 
+$ echo '.idea/' > .gitignore
+
+SMukhia@lt-lon-W059 MINGW64 ~/PycharmProjects/sql-connection (master)
+$ cat .gitignore
+.idea/

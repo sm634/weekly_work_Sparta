@@ -1,0 +1,567 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20192.19.0621.1547                               -->
+<workbook original-version='18.1' source-build='2019.2.1 (20192.19.0621.1547)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <SheetIdentifierTracking ignorable='true' predowngraded='true' />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='Sheet1 (Offsales)' inline='true' name='federated.0z90jah0mr7ba415kifmd1vlynyv' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='Offsales' name='excel-direct.0hgntaz1r7ajnq10tue5w14gvpdo'>
+            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='C:/Users/SMukhia/Desktop/weekly_work/Week_4/Tableau Datasets/Offsales.xlsx' interpretationMode='0' password='' server='' validate='no' />
+          </named-connection>
+        </named-connections>
+        <relation connection='excel-direct.0hgntaz1r7ajnq10tue5w14gvpdo' name='Sheet1' table='[Sheet1$]' type='table'>
+          <columns gridOrigin='A1:C18:no:A1:C18:0' header='yes' outcome='6'>
+            <column datatype='string' name='State' ordinal='0' />
+            <column datatype='string' name='Territory' ordinal='1' />
+            <column datatype='integer' name='Office sales' ordinal='2' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>State</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[State]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>State</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RGB_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Territory</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Territory]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>Territory</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RGB_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Office sales</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Office sales]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>Office sales</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:C18:no:A1:C18:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>6</attribute>
+            </attributes>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Calculation1' datatype='integer' name='[Calculation_593067788176490497]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='sum([Office sales]) + ZN(Sum([federated.15h2zzm1il22m00znbpi30dg77eo].[Coffee sales]))' />
+      </column>
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column datatype='string' name='[State]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+      <layout dim-ordering='alphabetic' dim-percentage='0.444444' measure-ordering='alphabetic' measure-percentage='0.555556' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United Kingdom&quot;' />
+      </semantic-values>
+      <date-options start-of-week='monday' />
+      <datasource-dependencies datasource='federated.15h2zzm1il22m00znbpi30dg77eo'>
+        <column datatype='integer' name='[Coffee sales]' role='measure' type='quantitative' />
+      </datasource-dependencies>
+    </datasource>
+    <datasource caption='Sheet1+ (Multiple Connections)' inline='true' name='federated.15h2zzm1il22m00znbpi30dg77eo' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='shopsales (1)' name='excel-direct.0jmxgn21p85ucf10worae0fuexb3'>
+            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='C:/Users/SMukhia/Desktop/weekly_work/Week_4/Tableau Datasets/shopsales (1).xlsx' interpretationMode='0' password='' server='' validate='no' />
+          </named-connection>
+          <named-connection caption='Offsales' name='excel-direct.0ktdowa0fgdimu17ofk9g0igump8'>
+            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='C:/Users/SMukhia/Desktop/weekly_work/Week_4/Tableau Datasets/Offsales.xlsx' interpretationMode='0' password='' server='' validate='no' />
+          </named-connection>
+        </named-connections>
+        <relation connection='excel-direct.0jmxgn21p85ucf10worae0fuexb3' name='Sheet1' table='[Sheet1$]' type='table'>
+          <columns gridOrigin='A1:C14:no:A1:C14:0' header='yes' outcome='6'>
+            <column datatype='string' name='State' ordinal='0' />
+            <column datatype='string' name='Region' ordinal='1' />
+            <column datatype='integer' name='Coffee sales' ordinal='2' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>State</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[State]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>State</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RGB_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Region</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Region]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>Region</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RGB_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Coffee sales</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Coffee sales]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>Coffee sales</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:C14:no:A1:C14:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>6</attribute>
+            </attributes>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column datatype='string' name='[State]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+      <layout dim-ordering='alphabetic' dim-percentage='0.444444' measure-ordering='alphabetic' measure-percentage='0.555556' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United Kingdom&quot;' />
+      </semantic-values>
+      <date-options start-of-week='monday' />
+    </datasource>
+  </datasources>
+  <datasource-relationships>
+    <datasource-dependencies datasource='federated.0z90jah0mr7ba415kifmd1vlynyv'>
+      <column datatype='string' name='[State]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+      <column datatype='string' name='[Territory]' role='dimension' type='nominal' />
+      <column-instance column='[State]' derivation='None' name='[none:State:nk]' pivot='key' type='nominal' />
+      <column-instance column='[Territory]' derivation='None' name='[none:Territory:nk]' pivot='key' type='nominal' />
+    </datasource-dependencies>
+    <datasource-dependencies datasource='federated.15h2zzm1il22m00znbpi30dg77eo'>
+      <column datatype='string' name='[Region]' role='dimension' type='nominal' />
+      <column datatype='string' name='[State]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+      <column-instance column='[Region]' derivation='None' name='[none:Region:nk]' pivot='key' type='nominal' />
+      <column-instance column='[State]' derivation='None' name='[none:State:nk]' pivot='key' type='nominal' />
+    </datasource-dependencies>
+    <datasource-relationship source='federated.15h2zzm1il22m00znbpi30dg77eo' target='federated.0z90jah0mr7ba415kifmd1vlynyv'>
+      <column-mapping>
+        <map key='[federated.15h2zzm1il22m00znbpi30dg77eo].[none:Region:nk]' value='[federated.0z90jah0mr7ba415kifmd1vlynyv].[none:Territory:nk]' />
+        <map key='[federated.15h2zzm1il22m00znbpi30dg77eo].[none:State:nk]' value='[federated.0z90jah0mr7ba415kifmd1vlynyv].[none:State:nk]' />
+      </column-mapping>
+    </datasource-relationship>
+  </datasource-relationships>
+  <worksheets>
+    <worksheet name='Sheet 1'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Sheet1 (Offsales)' name='federated.0z90jah0mr7ba415kifmd1vlynyv' />
+            <datasource caption='Sheet1+ (Multiple Connections)' name='federated.15h2zzm1il22m00znbpi30dg77eo' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0z90jah0mr7ba415kifmd1vlynyv'>
+            <column caption='Calculation1' datatype='integer' name='[Calculation_593067788176490497]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='sum([Office sales]) + ZN(Sum([federated.15h2zzm1il22m00znbpi30dg77eo].[Coffee sales]))' />
+            </column>
+            <column datatype='integer' name='[Office sales]' role='measure' type='quantitative' />
+            <column datatype='string' name='[State]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+            <column-instance column='[State]' derivation='None' name='[none:State:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Office sales]' derivation='Sum' name='[sum:Office sales:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_593067788176490497]' derivation='User' name='[usr:Calculation_593067788176490497:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.15h2zzm1il22m00znbpi30dg77eo'>
+            <column datatype='integer' name='[Coffee sales]' role='measure' type='quantitative' />
+            <column-instance column='[Coffee sales]' derivation='Sum' name='[sum:Coffee sales:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0z90jah0mr7ba415kifmd1vlynyv].[none:State:nk]'>
+            <groupfilter expression='SUM([Office sales]) &gt;= 400' function='filter' user:ui-filter-by-field='true' user:ui-marker='filter-by'>
+              <groupfilter function='level-members' level='[none:State:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.0z90jah0mr7ba415kifmd1vlynyv].[none:State:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='quick-filter'>
+            <format attr='color' value='#000000' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow' x-axis-name='[federated.0z90jah0mr7ba415kifmd1vlynyv].[sum:Office sales:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='3' selection-relaxation-option='selection-relaxation-allow' x-axis-name='[federated.15h2zzm1il22m00znbpi30dg77eo].[sum:Coffee sales:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='4' selection-relaxation-option='selection-relaxation-allow' x-axis-name='[federated.0z90jah0mr7ba415kifmd1vlynyv].[usr:Calculation_593067788176490497:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0z90jah0mr7ba415kifmd1vlynyv].[none:State:nk]</rows>
+        <cols>([federated.0z90jah0mr7ba415kifmd1vlynyv].[sum:Office sales:qk] + ([federated.15h2zzm1il22m00znbpi30dg77eo].[sum:Coffee sales:qk] + [federated.0z90jah0mr7ba415kifmd1vlynyv].[usr:Calculation_593067788176490497:qk]))</cols>
+        <mark-labels>
+          <mark-label id='0' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.0z90jah0mr7ba415kifmd1vlynyv].[sum:Office sales:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.0z90jah0mr7ba415kifmd1vlynyv].[none:State:nk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.0z90jah0mr7ba415kifmd1vlynyv].[none:State:nk]</field>
+                  <field>[federated.0z90jah0mr7ba415kifmd1vlynyv].[sum:Office sales:qk]</field>
+                  <field>[federated.15h2zzm1il22m00znbpi30dg77eo].[sum:Coffee sales:qk]</field>
+                  <field>[federated.0z90jah0mr7ba415kifmd1vlynyv].[usr:Calculation_593067788176490497:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;Ohio&quot;</value>
+                <value>410</value>
+                <value>45</value>
+                <value>455</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='2' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.0z90jah0mr7ba415kifmd1vlynyv].[sum:Office sales:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.0z90jah0mr7ba415kifmd1vlynyv].[none:State:nk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.0z90jah0mr7ba415kifmd1vlynyv].[none:State:nk]</field>
+                  <field>[federated.0z90jah0mr7ba415kifmd1vlynyv].[sum:Office sales:qk]</field>
+                  <field>[federated.15h2zzm1il22m00znbpi30dg77eo].[sum:Coffee sales:qk]</field>
+                  <field>[federated.0z90jah0mr7ba415kifmd1vlynyv].[usr:Calculation_593067788176490497:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;Texas&quot;</value>
+                <value>1960</value>
+                <value>580</value>
+                <value>2540</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='3' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.15h2zzm1il22m00znbpi30dg77eo].[sum:Coffee sales:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.0z90jah0mr7ba415kifmd1vlynyv].[none:State:nk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.0z90jah0mr7ba415kifmd1vlynyv].[none:State:nk]</field>
+                  <field>[federated.0z90jah0mr7ba415kifmd1vlynyv].[sum:Office sales:qk]</field>
+                  <field>[federated.15h2zzm1il22m00znbpi30dg77eo].[sum:Coffee sales:qk]</field>
+                  <field>[federated.0z90jah0mr7ba415kifmd1vlynyv].[usr:Calculation_593067788176490497:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;Texas&quot;</value>
+                <value>1960</value>
+                <value>580</value>
+                <value>2540</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='4' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.15h2zzm1il22m00znbpi30dg77eo].[sum:Coffee sales:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.0z90jah0mr7ba415kifmd1vlynyv].[none:State:nk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.0z90jah0mr7ba415kifmd1vlynyv].[none:State:nk]</field>
+                  <field>[federated.0z90jah0mr7ba415kifmd1vlynyv].[sum:Office sales:qk]</field>
+                  <field>[federated.15h2zzm1il22m00znbpi30dg77eo].[sum:Coffee sales:qk]</field>
+                  <field>[federated.0z90jah0mr7ba415kifmd1vlynyv].[usr:Calculation_593067788176490497:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;Ohio&quot;</value>
+                <value>410</value>
+                <value>45</value>
+                <value>455</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='6' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.0z90jah0mr7ba415kifmd1vlynyv].[usr:Calculation_593067788176490497:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.0z90jah0mr7ba415kifmd1vlynyv].[none:State:nk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.0z90jah0mr7ba415kifmd1vlynyv].[none:State:nk]</field>
+                  <field>[federated.0z90jah0mr7ba415kifmd1vlynyv].[sum:Office sales:qk]</field>
+                  <field>[federated.15h2zzm1il22m00znbpi30dg77eo].[sum:Coffee sales:qk]</field>
+                  <field>[federated.0z90jah0mr7ba415kifmd1vlynyv].[usr:Calculation_593067788176490497:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;Texas&quot;</value>
+                <value>1960</value>
+                <value>580</value>
+                <value>2540</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='7' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.0z90jah0mr7ba415kifmd1vlynyv].[usr:Calculation_593067788176490497:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.0z90jah0mr7ba415kifmd1vlynyv].[none:State:nk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.0z90jah0mr7ba415kifmd1vlynyv].[none:State:nk]</field>
+                  <field>[federated.0z90jah0mr7ba415kifmd1vlynyv].[sum:Office sales:qk]</field>
+                  <field>[federated.15h2zzm1il22m00znbpi30dg77eo].[sum:Coffee sales:qk]</field>
+                  <field>[federated.0z90jah0mr7ba415kifmd1vlynyv].[usr:Calculation_593067788176490497:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;Ohio&quot;</value>
+                <value>410</value>
+                <value>45</value>
+                <value>455</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+        </mark-labels>
+      </table>
+      <simple-id uuid='{D133A274-662A-4F90-89EC-DA6D3346E7B2}' />
+    </worksheet>
+  </worksheets>
+  <windows saved-dpi-scale-factor='1.25' source-height='63'>
+    <window class='worksheet' maximized='true' name='Sheet 1'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card mode='pattern' param='[federated.0z90jah0mr7ba415kifmd1vlynyv].[none:State:nk]' type='filter' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0z90jah0mr7ba415kifmd1vlynyv].[none:State:nk]</field>
+            <field>[federated.15h2zzm1il22m00znbpi30dg77eo].[none:State:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{B931D367-7903-43EF-8BDB-3E7146E71453}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='127' name='Sheet 1' width='192'>
+      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
+      QCjt/4f290xhzmLTAAAAAElFTkSuQmCC
+    </thumbnail>
+  </thumbnails>
+</workbook>
